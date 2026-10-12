@@ -3,23 +3,23 @@ import { Heart, MapPin, Utensils, Sparkles, Clock } from 'lucide-react';
 
 const events = [
   {
-    time: '8.00 AM',
-    title: 'Church Ceremony',
-    description: 'The Mass will commence at Our Lady of Sorrows Church, Kandawala.',
+    time: '11.00 AM',
+    title: 'Morning Church Ceremony',
+    description: 'The wedding ceremony will be held at St. Benedict Church, Waikkala, Sri Lanka.',
     icon: Heart,
     color: 'from-rose-400 to-rose-500'
   },
   {
-    time: '11.04 AM',
-    title: 'Poruwa Ceremony & Wedding Function',
-    description: 'Poruwa Ceremony commences at 11.04 am, followed by the wedding function at Senuri Grand Castello, Divulapitiya.',
+    time: '7.00 PM',
+    title: 'Evening Reception',
+    description: 'Join us for an evening reception at Moonlight Orilla Hotel, Nainamadama, Sri Lanka.',
     icon: MapPin,
     color: 'from-blue-500 to-blue-600'
   },
   {
-    time: 'July 24, 7.00 PM',
-    title: 'Homecoming Function',
-    description: 'Evening celebration and dinner at Jetwing Blue, Negombo.',
+    time: '10 December 2026',
+    title: 'A Day of Love',
+    description: 'Celebrating Malmi Fernando and Denson Diniz with family and friends.',
     icon: Utensils,
     color: 'from-amber-400 to-amber-500'
   },

@@ -77,17 +77,17 @@ export const WishesSection: React.FC<WishesSectionProps> = ({ eventParam = 'both
   return (
     <div className="max-w-4xl mx-auto px-6 relative py-12">
       {/* Background ambient glow */}
-      <div className="absolute top-0 right-1/4 w-3/4 h-3/4 bg-brand-lavender/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-0 right-1/4 w-3/4 h-3/4 bg-brand-plum/10 blur-[120px] rounded-full pointer-events-none -z-10" />
 
       <div className="text-center mb-16 relative">
-        <Sparkles className="absolute -top-8 left-1/2 -translate-x-1/2 w-8 h-8 text-brand-lavender/40 animate-pulse" />
+        <Sparkles className="absolute -top-8 left-1/2 -translate-x-1/2 w-8 h-8 text-brand-plum/40 animate-pulse" />
         <span className="text-brand-plum uppercase tracking-[0.5em] text-[10px] font-bold mb-4 block drop-shadow-sm">
           Guestbook
         </span>
         <h2 className="text-5xl sm:text-7xl font-display text-stone-800 tracking-tight drop-shadow-sm">
-          Blessings & <span className="italic font-light text-brand-plum">Wishes</span>
+          Blessings & <span className="italic font-light bg-gradient-to-r from-[#A87D25] via-[#DFBD69] to-[#9A7220] bg-clip-text text-transparent">Wishes</span>
         </h2>
-        <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-brand-lavender/60 to-transparent mx-auto mt-8" />
+        <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-brand-plum/40 to-transparent mx-auto mt-8" />
       </div>
 
       <div className="flex flex-col items-center">
@@ -139,7 +139,7 @@ export const WishesSection: React.FC<WishesSectionProps> = ({ eventParam = 'both
               <button
                 disabled={isSubmitting}
                 type="submit"
-                className="w-full bg-stone-800 text-brand-rose py-5 rounded-full font-sans tracking-[0.3em] font-bold text-[11px] uppercase hover:bg-stone-900 transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70"
+                className="w-full bg-stone-900 text-[#F7F3EB] py-5 rounded-full font-sans tracking-[0.3em] font-bold text-[11px] uppercase hover:bg-stone-950 border border-brand-plum/40 transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70"
               >
                 {isSubmitting ? (
                   <Loader2 className="w-5 h-5 animate-spin" />

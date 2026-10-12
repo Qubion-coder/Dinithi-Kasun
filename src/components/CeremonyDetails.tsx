@@ -12,7 +12,7 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
       {/* Premium ambient backdrop */}
-      <div className="absolute top-0 right-0 w-[80%] h-[80%] bg-gradient-radial from-brand-lavender/10 to-transparent rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[80%] h-[80%] bg-gradient-radial from-brand-plum/15 to-transparent rounded-full blur-[120px] pointer-events-none" />
 
       <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         {/* Left Side: Text Content */}
@@ -31,10 +31,10 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
             </div>
 
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display text-stone-800 mb-8 leading-[1.1] drop-shadow-sm">
-                <>A Celebration of <br /><span className="italic font-light text-brand-plum">Tradition & Love</span></>
+                <>A Celebration of <br /><span className="italic font-light bg-gradient-to-r from-[#A87D25] via-[#DFBD69] to-[#9A7220] bg-clip-text text-transparent">Tradition & Love</span></>
             </h2>
 
-            <p className="text-stone-500/90 font-serif text-lg sm:text-xl leading-relaxed mb-16 max-w-lg">
+            <p className="text-stone-600 font-serif text-lg sm:text-xl leading-relaxed mb-16 max-w-lg">
                 We are honored to invite you to witness our union as we exchange vows surrounded by the warmth of our loved ones.
             </p>
 
@@ -48,7 +48,7 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                 </div>
                 <div>
                   <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 group-hover:text-brand-plum transition-colors duration-500">
-                    Date: August 13, 2026
+                    Date: December 10, 2026
                   </h4>
                 </div>
               </div>
@@ -60,14 +60,14 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                 </div>
                 <div>
                   <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-3 group-hover:text-brand-plum transition-colors duration-500">
-                    Church Ceremony
+                    Morning Church Ceremony
                   </h4>
                   <div className="space-y-1.5 text-stone-500/90 font-serif text-base sm:text-lg">
                     <p>
-                      <span className="font-semibold text-stone-700">Time:</span> 03.30 PM
+                      <span className="font-semibold text-stone-700">Time:</span> 11:00 AM
                     </p>
                     <p className="leading-relaxed">
-                      <span className="font-semibold text-stone-700">Venue:</span> St. Mary's Church,<br className="hidden sm:block" /> Negombo
+                      <span className="font-semibold text-stone-700">Venue:</span> St. Benedict Church,<br className="hidden sm:block" /> Waikkala, Sri Lanka
                     </p>
                   </div>
                 </div>
@@ -80,14 +80,14 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                 </div>
                 <div>
                   <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-3 group-hover:text-brand-plum transition-colors duration-500">
-                    Wedding Function
+                    Evening Reception
                   </h4>
                   <div className="space-y-1.5 text-stone-500/90 font-serif text-base sm:text-lg">
                     <p>
-                      <span className="font-semibold text-stone-700">Time:</span> 06.30 PM Onwards
+                      <span className="font-semibold text-stone-700">Time:</span> 07:00 PM
                     </p>
                     <p className="leading-relaxed">
-                      <span className="font-semibold text-stone-700">Venue:</span> Centrium Ballroom, Avenra Gardens,<br className="hidden sm:block" /> Negombo
+                      <span className="font-semibold text-stone-700">Venue:</span> Moonlight Orilla Hotel,<br className="hidden sm:block" /> Nainamadama, Sri Lanka
                     </p>
                   </div>
                 </div>

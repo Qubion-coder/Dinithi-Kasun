@@ -3,9 +3,8 @@ import { motion } from 'motion/react';
 import { Heart, Music, Camera, Utensils, PartyPopper } from 'lucide-react';
 
 const events = [
-  { time: '08:00 AM', title: 'Church Ceremony', icon: Heart, desc: 'The Mass will commence at Our Lady of Sorrows Church, Kandawala.' },
-  { time: '11:04 AM', title: 'Poruwa Ceremony & Wedding Function', icon: PartyPopper, desc: 'Poruwa Ceremony commences at 11.04 am, followed by the wedding function at Senuri Grand Castello, Divulapitiya.' },
-  { time: 'July 24, 7:00 PM', title: 'Homecoming Function', icon: Utensils, desc: 'Evening celebration and dinner at Jetwing Blue, Negombo.' },
+  { time: 'December 10, 11:00 AM', title: 'Morning Church Ceremony', icon: Heart, desc: 'The wedding ceremony will be held at St. Benedict Church, Waikkala, Sri Lanka.' },
+  { time: 'December 10, 7:00 PM', title: 'Evening Reception', icon: PartyPopper, desc: 'Join us for an evening reception at Moonlight Orilla Hotel, Nainamadama, Sri Lanka.' },
 ];
 
 interface TimelineProps {
@@ -14,11 +13,8 @@ interface TimelineProps {
 
 export const Timeline: React.FC<TimelineProps> = ({ event = 'both' }) => {
   const filteredEvents = events.filter(evt => {
-    if (event === 'poruwa') {
-      return evt.title !== 'Homecoming Function';
-    }
     if (event === 'homecoming') {
-      return evt.title === 'Homecoming Function';
+      return evt.title === 'Evening Reception';
     }
     return true; // 'both' or default
   });

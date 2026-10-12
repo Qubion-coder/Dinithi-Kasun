@@ -41,7 +41,7 @@ export function EnvelopeOpening({
           width: 100%;
           min-height: 100%;
           margin: 0;
-          background: #fffff4;
+          background: #F7F3EB;
         }
 
         .scene {
@@ -66,7 +66,7 @@ export function EnvelopeOpening({
           align-items: center;
           justify-content: center;
           padding: 20px;
-          background: radial-gradient(ellipse at 30% 20%, #fffff4 0%, #f8dbdf 40%, #f0b9c3 100%);
+          background: radial-gradient(ellipse at 30% 20%, #FAF7F2 0%, #EFE5D5 45%, #DFD0B8 100%);
           perspective: 1500px;
           overflow: hidden;
           font-family: "Cormorant Garamond", serif;
@@ -86,14 +86,14 @@ export function EnvelopeOpening({
           height: 400px;
           top: -100px;
           right: -100px;
-          background: radial-gradient(circle, rgba(120,97,125,0.15) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(197,155,63,0.18) 0%, transparent 70%);
         }
         .scene::after {
           width: 300px;
           height: 300px;
           bottom: -80px;
           left: -80px;
-          background: radial-gradient(circle, rgba(120,97,125,0.12) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(216,199,168,0.2) 0%, transparent 70%);
         }
 
         .envelope-container {
@@ -113,9 +113,9 @@ export function EnvelopeOpening({
         .envelope-base {
           position: absolute;
           inset: 0;
-          background: linear-gradient(145deg, #fdfbf7, #f4eee1);
+          background: linear-gradient(145deg, #FAF7F2, #EDE3D1);
           border-radius: 6px;
-          box-shadow: 0 30px 60px -15px rgba(176,154,183,0.3), 0 0 0 1px rgba(176,154,183,0.1);
+          box-shadow: 0 30px 60px -15px rgba(130,105,70,0.22), 0 0 0 1px rgba(197,155,63,0.15);
           z-index: 1;
         }
 
@@ -123,11 +123,11 @@ export function EnvelopeOpening({
         .card-container {
           position: absolute;
           inset: 0;
-          background: linear-gradient(180deg, #ffffff 0%, #fdfbf7 50%, #fdfbf7 100%);
+          background: linear-gradient(180deg, #FDFBF7 0%, #F8F2E6 50%, #EFE3CE 100%);
           border-radius: 6px;
           z-index: 2;
           overflow: hidden;
-          box-shadow: inset 0 0 30px rgba(176,154,183,0.05);
+          box-shadow: inset 0 0 30px rgba(197,155,63,0.06);
           transform: scale(1);
           transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
@@ -141,7 +141,7 @@ export function EnvelopeOpening({
         .card-border {
           position: absolute;
           inset: 18px;
-          border: 1.5px solid rgba(120,97,125,0.5);
+          border: 1.5px solid rgba(197,155,63,0.65);
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -154,7 +154,7 @@ export function EnvelopeOpening({
           content: '';
           position: absolute;
           inset: 7px;
-          border: 0.5px solid rgba(120,97,125,0.2);
+          border: 0.5px solid rgba(197,155,63,0.3);
         }
 
         /* Corner Ornaments */
@@ -181,14 +181,14 @@ export function EnvelopeOpening({
         .divider-line {
           width: 50px;
           height: 0.5px;
-          background: linear-gradient(90deg, transparent, #b89645, transparent);
+          background: linear-gradient(90deg, transparent, #C59B3F, transparent);
         }
         .divider-diamond {
           width: 6px;
           height: 6px;
-          background: #b89645;
+          background: #C59B3F;
           transform: rotate(45deg);
-          opacity: 0.7;
+          opacity: 0.8;
         }
 
         /* Typography */
@@ -197,24 +197,28 @@ export function EnvelopeOpening({
           font-size: 10px;
           letter-spacing: 0.45em;
           text-transform: uppercase;
-          color: #b89645;
+          color: #A37C2C;
           margin-bottom: 20px;
           margin-top: auto;
           z-index: 2;
-          font-weight: 400;
+          font-weight: 500;
         }
 
         .text-names {
           font-family: var(--font-names), "Cinzel Decorative", serif;
-          font-size: 60px;
+          font-size: 58px;
           line-height: 1.1;
-          color: #4a3a4d;
+          color: #9A7220;
+          background: linear-gradient(135deg, #A87D25 0%, #DFBD69 35%, #9A7220 70%, #C89D3C 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
           margin: 0 0 10px 0;
-          font-weight: 400;
+          font-weight: 600;
           z-index: 2;
           display: flex;
           flex-direction: column;
           align-items: center;
+          filter: drop-shadow(0 1px 1px rgba(255,255,255,0.7));
         }
         
         .text-ampersand {
@@ -222,8 +226,8 @@ export function EnvelopeOpening({
           font-size: 40px;
           display: block;
           margin: -2px 0;
-          color: #b89645;
-          text-shadow: 0 1px 2px rgba(120,97,125,0.3);
+          color: #C59B3F;
+          text-shadow: 0 1px 2px rgba(184,138,46,0.3);
         }
 
         .text-details {
@@ -231,29 +235,29 @@ export function EnvelopeOpening({
           font-size: 9.5px;
           letter-spacing: 0.22em;
           text-transform: uppercase;
-          color: #b89645;
+          color: #8C6A24;
           line-height: 2.2;
           margin-bottom: auto;
           z-index: 2;
-          font-weight: 300;
+          font-weight: 400;
         }
 
         .text-date {
           display: block;
           margin: 12px 0;
           font-size: 11px;
-          font-weight: 500;
+          font-weight: 600;
           letter-spacing: 0.28em;
-          color: #b89645;
+          color: #A87D25;
         }
 
         .text-church {
           font-family: "Cormorant Garamond", serif;
-          font-size: 14px;
+          font-size: 15px;
           font-style: italic;
-          font-weight: 400;
+          font-weight: 600;
           letter-spacing: 0.1em;
-          color: #b89645;
+          color: #A87D25;
           margin-top: 4px;
           text-transform: none;
         }
@@ -265,11 +269,11 @@ export function EnvelopeOpening({
           left: 0;
           width: 66%;
           height: 100%;
-          background: linear-gradient(135deg, #fdfbf7 0%, #f4eee1 50%, #fdfbf7 100%);
+          background: linear-gradient(135deg, #FAF7F2 0%, #EFE4D2 50%, #FAF7F2 100%);
           background-image: linear-gradient(135deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%);
           background-size: 8px 8px;
-          border-right: 1px solid rgba(120,97,125,0.15);
-          box-shadow: 10px 0 30px -10px rgba(120,97,125,0.25);
+          border-right: 1px solid rgba(197,155,63,0.25);
+          box-shadow: 10px 0 30px -10px rgba(130,105,70,0.2);
           transform-origin: left center;
           transform: rotateY(0deg);
           transition: transform 1.5s cubic-bezier(0.25, 1, 0.3, 1), box-shadow 1.5s ease;
@@ -312,13 +316,13 @@ export function EnvelopeOpening({
           height: 54px;
           background: linear-gradient(
             to bottom, 
-            #ffffff 0%, 
-            #fdfbf7 25%, 
-            #f4eee1 50%, 
-            #fdfbf7 75%, 
-            #e8dfce 100%
+            #FAF7F2 0%, 
+            #EFE5D2 25%, 
+            #D8C49D 50%, 
+            #EFE5D2 75%, 
+            #CBB380 100%
           );
-          box-shadow: 0 4px 6px rgba(0,0,0,0.1), inset 0 1px rgba(255,255,255,0.6);
+          box-shadow: 0 4px 10px rgba(120,95,50,0.18), inset 0 1px rgba(255,255,255,0.7);
         }
 
         /* Bow Container */
@@ -336,7 +340,7 @@ export function EnvelopeOpening({
           width: 100%;
           height: 100%;
           object-fit: contain;
-          filter: drop-shadow(0 6px 8px rgba(0,0,0,0.15)) sepia(0.3) saturate(0.7) brightness(1.1) hue-rotate(350deg);
+          filter: drop-shadow(0 6px 10px rgba(130,105,70,0.22)) sepia(0.55) saturate(1.2) brightness(0.98);
           transform: scale(1.6);
         }
 
@@ -345,7 +349,7 @@ export function EnvelopeOpening({
           bottom: -60px;
           left: 50%;
           transform: translateX(-50%);
-          color: #b89645;
+          color: #9A7220;
           font-family: "Montserrat", sans-serif;
           font-size: 10px;
           letter-spacing: 0.35em;
@@ -450,9 +454,9 @@ export function EnvelopeOpening({
               </div>
 
               <h1 className="text-names">
-                Apsara
+                Malmi
                 <span className="text-ampersand">&</span>
-                Teshan
+                Denson
               </h1>
 
               <div className="divider">
@@ -463,9 +467,9 @@ export function EnvelopeOpening({
 
               <div className="text-details">
                 Request the honour of your presence<br />
-                to celebrate their marriage at<br />
-                <span className="text-church">Centrium Ballroom, Avenra Gardens</span><br />
-                Negombo
+                to celebrate their marriage on<br />
+                <span className="text-church">10 December 2026</span><br />
+                St. Benedict Church, Waikkala
               </div>
             </div>
           </div>

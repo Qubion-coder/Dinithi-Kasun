@@ -10,20 +10,20 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
   const venues = [
     {
       id: 'ceremony',
-      name: "St. Mary's Church",
-      city: "Negombo",
+      name: "St. Benedict Church",
+      city: "Waikkala, Sri Lanka",
       quote: `"A beautiful and sacred place where we will unite in holy matrimony."`,
-      liveLocationUrl: "https://maps.app.goo.gl/kPtBACZFd3AcKa1u9",
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Negombo%2C_St._Mary%27s_Church%2C_2025-07_CN-02.jpg",
+      liveLocationUrl: "https://maps.app.goo.gl/tkMtEDyhc9J4Dbhn7",
+      imageUrl: "/Screenshot%202026-10-13%20002524.png",
       label: "The Ceremony"
     },
     {
       id: 'reception',
-      name: "Centrium Ballroom, Avenra Gardens",
-      city: "Negombo",
+      name: "Moonlight Orilla Hotel",
+      city: "Nainamadama, Sri Lanka",
       quote: `"A serene and elegant setting where we will celebrate our wedding function with joy and laughter."`,
-      liveLocationUrl: "https://maps.app.goo.gl/3HPomRVMHdbHUbo86",
-      imageUrl: "https://www.aha.lk/img/projects/1%20%281%291565002653.jpg",
+      liveLocationUrl: "https://maps.app.goo.gl/TRfiYteK6xzxkYtV7",
+      imageUrl: "/Screenshot%202026-10-13%20003003.png",
       label: "The Reception"
     }
   ];
@@ -60,22 +60,22 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                       <div className="w-16 h-[1px] bg-gradient-to-r from-brand-plum/60 to-transparent" />
                     </div>
 
-                    <h2 className="text-5xl sm:text-6xl font-display text-stone-800 mb-6 leading-tight drop-shadow-sm">
+                    <h2 className="text-4xl sm:text-5xl font-display text-stone-800 mb-6 leading-[1.15] drop-shadow-sm">
                       Where We <br />
-                      <span className="italic font-light text-brand-plum">Celebrate</span>
+                      <span className="inline-block italic font-light bg-gradient-to-r from-[#A87D25] via-[#DFBD69] to-[#9A7220] bg-clip-text text-transparent whitespace-nowrap">Celebrate</span>
                     </h2>
 
                     <motion.div 
                       className="flex items-start gap-5 mt-4"
                     >
-                      <div className="w-12 h-12 bg-stone-50 rounded-full border border-brand-lavender/40 shadow-inner flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+                      <div className="w-12 h-12 bg-[#FAF7F2] rounded-full border border-brand-plum/40 shadow-inner flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
                         <MapPin className="text-brand-plum w-5 h-5" />
                       </div>
                       <div>
                         <p className="text-2xl font-serif text-stone-800 mb-1">{venue.name}</p>
-                        <p className="text-[11px] uppercase tracking-[0.2em] font-medium text-stone-400 leading-relaxed mb-6">{venue.city}</p>
+                        <p className="text-[11px] uppercase tracking-[0.2em] font-medium text-stone-500 leading-relaxed mb-6">{venue.city}</p>
                         
-                        <p className="text-stone-500/90 italic font-serif text-lg leading-relaxed max-w-sm mb-10 pl-4 border-l-[1.5px] border-brand-lavender/40">
+                        <p className="text-stone-600 italic font-serif text-lg leading-relaxed max-w-sm mb-10 pl-4 border-l-[1.5px] border-brand-plum/40">
                           {venue.quote}
                         </p>
 
@@ -83,7 +83,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                           href={venue.liveLocationUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-3 bg-stone-800 text-brand-rose px-8 py-4 rounded-full font-sans tracking-[0.2em] text-xs uppercase hover:bg-stone-900 hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-all duration-300 active:scale-95 group/btn"
+                          className="inline-flex items-center gap-3 bg-stone-900 text-[#F7F3EB] px-8 py-4 rounded-full font-sans tracking-[0.2em] text-xs uppercase hover:bg-stone-950 hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-all duration-300 active:scale-95 group/btn border border-brand-plum/30"
                         >
                           <Navigation className="w-4 h-4 text-brand-plum group-hover/btn:rotate-45 transition-transform duration-300" />
                           Open Live Location

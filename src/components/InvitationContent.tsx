@@ -124,13 +124,24 @@ export function InvitationContent({
       </DeferredMount>
 
       <DeferredMount active={active} delay={520}>
-        <footer className="py-12 bg-white border-t border-brand-lavender/20 text-center relative overflow-hidden mt-10">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-lavender/10 blur-[80px] rounded-full pointer-events-none" />
-          <Heart className="w-6 h-6 mx-auto mb-6 text-brand-plum fill-brand-lavender/20" />
-          <p className="font-names text-4xl sm:text-5xl text-stone-800 mb-2">Apsara & Teshan</p>
-          <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] font-sans text-stone-400 font-semibold block mb-8">
-            August 13, 2026
+        <footer className="py-12 bg-white border-t border-brand-lavender/30 text-center relative overflow-hidden mt-10">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-plum/10 blur-[80px] rounded-full pointer-events-none" />
+          <Heart className="w-6 h-6 mx-auto mb-6 text-brand-plum fill-brand-plum/20" />
+          <p className="font-names text-4xl sm:text-5xl mb-2 bg-gradient-to-r from-[#A87D25] via-[#DFBD69] to-[#9A7220] bg-clip-text text-transparent">Malmi & Denson</p>
+          <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] font-sans text-stone-500 font-semibold block mb-8">
+            December 10, 2026
           </span>
+          <p className="text-brand-plum text-xs mt-2 font-sans tracking-wider">
+            Want a beautiful wedding website like this? Create yours with{' '}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#A87D25] hover:text-brand-plum underline underline-offset-2 transition-colors"
+              href="https://wa.me/94707819074"
+            >
+              invitemint
+            </a>
+          </p>
         </footer>
       </DeferredMount>
     </motion.div>

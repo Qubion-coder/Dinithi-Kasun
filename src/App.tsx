@@ -1,44 +1,33 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { AnimatePresence } from 'motion/react';
 import { Toaster } from 'sonner';
 
-import { EnvelopeOpening } from './components/EnvelopeOpening';
 import { InvitationContent } from './components/InvitationContent';
 import { Admin } from './components/Admin';
-import { INVITATION_IMAGE_URLS, preloadImages } from './utils/preloadImages';
+import { IntroScreen } from './components/IntroScreen';
 
 const isAdminRoute = () => window.location.pathname === '/admin';
 
 export default function App() {
   const [showInvitation, setShowInvitation] = useState(false);
-  const [assetsReady, setAssetsReady] = useState(false);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const params = new URLSearchParams(window.location.search);
-  const titleParam = params.get('title') || '';
-  const nameParam = params.get('name') || '';
+  const pathGuestName = decodeURIComponent(window.location.pathname.slice(1)).trim();
+  const titleParam = params.get('prefix') || params.get('title') || '';
+  const nameParam = params.get('name') || pathGuestName;
   const eventParam = params.get('event') || 'both';
 
-  const fullInviteeName = `${titleParam} ${nameParam}`.trim();
+  const normalizedName = nameParam.trim();
+  const fullInviteeName = titleParam === 'Family'
+    ? `${normalizedName} and Family`
+    : titleParam === 'Dear'
+      ? normalizedName
+      : `${titleParam} ${normalizedName}`.trim();
 
   let eventLabel = 'Our Wedding Celebration';
 
-  const weddingDate = new Date('2026-08-14T10:15:00');
-
-  useEffect(() => {
-    if (isAdminRoute()) return;
-
-    let cancelled = false;
-
-    preloadImages([...INVITATION_IMAGE_URLS]).then(() => {
-      if (!cancelled) setAssetsReady(true);
-    });
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+  const weddingDate = new Date('2026-12-10T11:00:00');
 
   const ensureAudio = useCallback(() => {
     if (!audioRef.current) {
@@ -59,12 +48,6 @@ export default function App() {
     };
   }, []);
 
-  const handleMusicStart = useCallback(() => {
-    setIsMusicPlaying(true);
-    const audio = ensureAudio();
-    audio.play().catch(console.error);
-  }, [ensureAudio]);
-
   const toggleMusic = useCallback(() => {
     const audio = ensureAudio();
     if (isMusicPlaying) {
@@ -75,12 +58,11 @@ export default function App() {
     setIsMusicPlaying((playing) => !playing);
   }, [ensureAudio, isMusicPlaying]);
 
-  const handleEnvelopeComplete = useCallback(() => {
-    requestAnimationFrame(() => {
-      window.scrollTo(0, 0);
-      setShowInvitation(true);
-    });
-  }, []);
+  const handleIntroMusicStart = useCallback(() => {
+    setIsMusicPlaying(true);
+    const audio = ensureAudio();
+    audio.play().catch(console.error);
+  }, [ensureAudio]);
 
   if (isAdminRoute()) {
     return (
@@ -105,17 +87,16 @@ export default function App() {
         onToggleMusic={toggleMusic}
       />
 
-      <AnimatePresence mode="wait">
-        {!showInvitation && (
-          <EnvelopeOpening
-            key="envelope"
-            onComplete={handleEnvelopeComplete}
-            onMusicStart={handleMusicStart}
-            event={eventParam}
-            readyToTransition={assetsReady}
-          />
-        )}
-      </AnimatePresence>
+      {!showInvitation && (
+        <IntroScreen
+          onComplete={() => {
+            window.scrollTo(0, 0);
+            setShowInvitation(true);
+          }}
+          onMusicStart={handleIntroMusicStart}
+        />
+      )}
+
     </>
   );
 }

@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ivory/Pink/Gold Color Palette */
-  --color-brand-plum: #b89645;
-  --color-brand-lavender: #f0b9c3;
-  --color-brand-rose: #f8dbdf;
-  --color-brand-blush: #fffff4;
+  /* Light Brown / Dark Cream & Gold Color Palette */
+  --color-brand-plum: #C59B3F;       /* Warm Regal Gold */
+  --color-brand-lavender: #D8C7A8;   /* Warm Light Brown / Latte Cream Accent */
+  --color-brand-rose: #EFE7DA;       /* Rich Light Champagne Cream */
+  --color-brand-blush: #F7F3EB;      /* Dark Cream / Warm Sand Base */
 
   --font-serif: "Cormorant Garamond", serif;
   --font-display: "Great Vibes", cursive;
@@ -18,7 +18,7 @@
 
 :root {
   background-color: var(--color-brand-blush);
-  color: #292524;
+  color: #382E25;
 }
 
 html, body {

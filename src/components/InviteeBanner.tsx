@@ -28,7 +28,7 @@ export const InviteeBanner: React.FC<InviteeBannerProps> = ({ inviteeName, event
             <Sparkles className="w-4 h-4 text-brand-plum animate-pulse" />
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display text-stone-800 tracking-tight mb-4 drop-shadow-sm">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display tracking-tight mb-4 drop-shadow-sm bg-gradient-to-r from-[#A87D25] via-[#DFBD69] to-[#9A7220] bg-clip-text text-transparent">
             {inviteeName}
           </h2>
 
@@ -40,7 +40,7 @@ export const InviteeBanner: React.FC<InviteeBannerProps> = ({ inviteeName, event
             <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-brand-plum/40" />
           </div>
 
-          <Heart className="w-5 h-5 text-brand-plum mt-6 fill-brand-lavender/20 animate-pulse" />
+          <Heart className="w-5 h-5 text-brand-plum mt-6 fill-brand-plum/20 animate-pulse" />
         </motion.div>
       </div>
     </div>
