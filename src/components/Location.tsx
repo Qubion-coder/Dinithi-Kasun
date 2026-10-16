@@ -14,7 +14,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
       city: "Katubedda, Moratuwa",
       quote: `"A beautiful and sacred place where we will unite in holy matrimony."`,
       liveLocationUrl: "https://www.google.com/maps/search/?api=1&query=Queen+of+Angels+Church+Katubedda+Moratuwa",
-      imageUrl: "/Screenshot%202026-10-16%20191821.png",
+      imageUrl: "/opt/church.webp",
       label: "The Ceremony"
     },
     {
@@ -23,7 +23,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
       city: "No. 6, Pinketha Rd, Homagama",
       quote: `"A serene and elegant setting where we will celebrate our wedding function with joy and laughter."`,
       liveLocationUrl: "https://www.google.com/maps/search/?api=1&query=Hotel+Green+Court+Pinketha+Road+Homagama",
-      imageUrl: "/Screenshot%202026-10-16%20192102.png",
+      imageUrl: "/opt/hotel.webp",
       label: "The Reception"
     }
   ];
@@ -114,6 +114,8 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                   <img
                     src={venue.imageUrl}
                     alt={`${venue.name} Location`}
+                    loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] ease-in-out group-hover/map:scale-105"
                   />
 

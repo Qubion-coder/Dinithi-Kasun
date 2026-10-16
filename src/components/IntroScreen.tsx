@@ -55,7 +55,8 @@ export function IntroScreen({ onComplete, onMusicStart }: IntroScreenProps) {
       <motion.video
         ref={secondVideoRef}
         className="absolute inset-0 h-full w-full object-cover"
-        src="/gemini_generated_video_8a3962d0.mp4"
+        src="/opt/intro-8a3962d0.mp4"
+        poster="/opt/intro-8a3962d0-poster.jpg"
         muted={muted}
         playsInline
         preload="auto"
@@ -68,7 +69,8 @@ export function IntroScreen({ onComplete, onMusicStart }: IntroScreenProps) {
       <motion.video
         ref={firstVideoRef}
         className="absolute inset-0 h-full w-full object-cover"
-        src="/gemini_generated_video_a42fa110.mp4"
+        src="/opt/intro-a42fa110.mp4"
+        poster="/opt/intro-a42fa110-poster.jpg"
         muted={muted}
         playsInline
         preload="auto"
@@ -133,7 +135,7 @@ export function IntroScreen({ onComplete, onMusicStart }: IntroScreenProps) {
       </button>
 
       <motion.img
-        src="/door-left.webp"
+        src="/opt/door-left.webp"
         alt=""
         aria-hidden="true"
         initial={false}
@@ -142,7 +144,7 @@ export function IntroScreen({ onComplete, onMusicStart }: IntroScreenProps) {
         className="pointer-events-none absolute inset-y-0 left-0 z-20 h-[100dvh] w-1/2 origin-right object-cover object-right"
       />
       <motion.img
-        src="/door-right.webp"
+        src="/opt/door-right.webp"
         alt=""
         aria-hidden="true"
         initial={false}
