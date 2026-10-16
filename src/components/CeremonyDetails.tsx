@@ -43,19 +43,19 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
 
               {/* Date */}
               <div className="relative group flex items-center min-h-[48px]">
-                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(176,137,104,0.3)] transition-all duration-500">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(15,31,61,0.3)] transition-all duration-500">
                   <Calendar className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
                   <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 group-hover:text-brand-plum transition-colors duration-500">
-                    Date: December 10, 2026
+                    Date: December 05, 2026
                   </h4>
                 </div>
               </div>
 
               {/* Church Ceremony */}
               <div className="relative group">
-                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(176,137,104,0.3)] transition-all duration-500">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(15,31,61,0.3)] transition-all duration-500">
                   <Clock className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
@@ -64,10 +64,10 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                   </h4>
                   <div className="space-y-1.5 text-stone-500/90 font-serif text-base sm:text-lg">
                     <p>
-                      <span className="font-semibold text-stone-700">Time:</span> 11:00 AM
+                      <span className="font-semibold text-stone-700">Time:</span> From 8:30 AM
                     </p>
                     <p className="leading-relaxed">
-                      <span className="font-semibold text-stone-700">Venue:</span> St. Benedict Church,<br className="hidden sm:block" /> Waikkala, Sri Lanka
+                      <span className="font-semibold text-stone-700">Venue:</span> Queen of Angels Church,<br className="hidden sm:block" /> Katubedda, Moratuwa
                     </p>
                   </div>
                 </div>
@@ -75,19 +75,19 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
 
               {/* Wedding Function */}
               <div className="relative group">
-                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(176,137,104,0.3)] transition-all duration-500">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(15,31,61,0.3)] transition-all duration-500">
                   <MapPin className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
                   <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-3 group-hover:text-brand-plum transition-colors duration-500">
-                    Evening Reception
+                    Reception
                   </h4>
                   <div className="space-y-1.5 text-stone-500/90 font-serif text-base sm:text-lg">
                     <p>
-                      <span className="font-semibold text-stone-700">Time:</span> 07:00 PM
+                      <span className="font-semibold text-stone-700">Time:</span> 11:00 AM to 4:00 PM
                     </p>
                     <p className="leading-relaxed">
-                      <span className="font-semibold text-stone-700">Venue:</span> Moonlight Orilla Hotel,<br className="hidden sm:block" /> Nainamadama, Sri Lanka
+                      <span className="font-semibold text-stone-700">Venue:</span> Hotel Green Court (Emperor's Court),<br className="hidden sm:block" /> No. 6, Pinketha Rd, Homagama
                     </p>
                   </div>
                 </div>

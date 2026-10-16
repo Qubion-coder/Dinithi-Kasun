@@ -21,9 +21,9 @@ export const CoupleDetails: React.FC = () => {
             <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-brand-plum/60" />
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-names tracking-tight drop-shadow-sm py-2 leading-tight whitespace-nowrap">
-            <span className="bg-gradient-to-r from-[#A87D25] via-[#DFBD69] to-[#9A7220] bg-clip-text text-transparent">Malmi</span>
+            <span className="bg-gradient-to-r from-[#A87D25] via-[#DFBD69] to-[#9A7220] bg-clip-text text-transparent">Dinithi</span>
             <span className="text-[#C59B3F] font-light mx-2">&</span>
-            <span className="bg-gradient-to-r from-[#A87D25] via-[#DFBD69] to-[#9A7220] bg-clip-text text-transparent">Denson</span>
+            <span className="bg-gradient-to-r from-[#A87D25] via-[#DFBD69] to-[#9A7220] bg-clip-text text-transparent">Kasun</span>
           </h2>
         </motion.div>
       </div>
@@ -40,11 +40,10 @@ export const CoupleDetails: React.FC = () => {
           <div className="mb-4 flex flex-col items-center lg:items-end">
             <span className="text-brand-plum uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Groom</span>
             <h3 className="text-4xl sm:text-5xl font-names mb-2 drop-shadow-sm bg-gradient-to-r from-[#9A7220] via-[#C59B3F] to-[#8C6418] bg-clip-text text-transparent">
-              Denson Diniz
+              Kasun
             </h3>
             <p className="text-stone-700 font-century text-xs mb-2"></p>
-            <p className="text-stone-600 font-serif italic text-base sm:text-lg">Son of Mr. Liberatus Diniz & Mrs. Thoppage Irangani Costa</p>
-            <p className="text-stone-500 font-serif text-sm mt-2">Nainamadama, Sri Lanka</p>
+            <p className="text-stone-600 font-serif italic text-base sm:text-lg">Son of Mr. & Mrs. Fernando</p>
           </div>
           <div className="hidden lg:flex justify-end mt-8">
             <Heart className="w-6 h-6 text-brand-plum/80 fill-brand-plum/20 transform hover:scale-110 transition-transform cursor-pointer" />
@@ -65,11 +64,10 @@ export const CoupleDetails: React.FC = () => {
           <div className="mb-4 flex flex-col items-center lg:items-start">
             <span className="text-brand-plum uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Bride</span>
             <h3 className="text-4xl sm:text-5xl font-names mb-2 drop-shadow-sm bg-gradient-to-r from-[#9A7220] via-[#C59B3F] to-[#8C6418] bg-clip-text text-transparent">
-              Malmi Fernando
+              Dinithi
             </h3>
             <p className="text-stone-700 font-century text-xs mb-2"></p>
-            <p className="text-stone-600 font-serif italic text-base sm:text-lg">Daughter of Mr. K. Wilfred Fernando & Mrs. A. Chandrika Vasanthi Fernando</p>
-            <p className="text-stone-500 font-serif text-sm mt-2">Negombo, Sri Lanka</p>
+            <p className="text-stone-600 font-serif italic text-base sm:text-lg">Daughter of Mr. & Mrs. De Silva</p>
           </div>
           <div className="hidden lg:flex justify-start mt-8">
             <Heart className="w-6 h-6 text-brand-plum/80 fill-brand-plum/20 transform hover:scale-110 transition-transform cursor-pointer" />

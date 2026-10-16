@@ -91,10 +91,10 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] sm:w-[125%] h-[150%] sm:h-[160%] bg-gradient-radial from-white/95 via-white/85 to-transparent blur-[40px] sm:blur-[70px] rounded-full pointer-events-none" />
 
             <h1 className="relative text-4xl sm:text-[5.5rem] lg:text-[7.5rem] font-names font-normal leading-normal sm:leading-[0.85] tracking-normal sm:tracking-tight overflow-visible py-2">
-              <span className="bg-gradient-to-r from-[#B88A2E] via-[#E8CF88] to-[#9A7220] bg-clip-text text-transparent drop-shadow-[0_4px_16px_rgba(255,255,255,0.9)]">MALMI</span> <br className="sm:hidden" />
+              <span className="bg-gradient-to-r from-[#B88A2E] via-[#E8CF88] to-[#9A7220] bg-clip-text text-transparent drop-shadow-[0_4px_16px_rgba(255,255,255,0.9)]">DINITHI</span> <br className="sm:hidden" />
               <span className="text-[#C59B3F] font-normal mx-2 sm:mx-6 text-3xl sm:text-[4.5rem] lg:text-[6rem] inline-block -translate-y-1 sm:-translate-y-6 drop-shadow-[0_4px_12px_rgba(197,155,63,0.3)]">&</span>
               <br className="sm:hidden" />
-              <span className="bg-gradient-to-r from-[#B88A2E] via-[#E8CF88] to-[#9A7220] bg-clip-text text-transparent drop-shadow-[0_4px_16px_rgba(255,255,255,0.9)]">DENSON</span>
+              <span className="bg-gradient-to-r from-[#B88A2E] via-[#E8CF88] to-[#9A7220] bg-clip-text text-transparent drop-shadow-[0_4px_16px_rgba(255,255,255,0.9)]">KASUN</span>
             </h1>
           </div>
 
@@ -115,8 +115,8 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
       <div className="absolute left-6 sm:left-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-6 z-30">
         <div className="w-[1px] h-28 bg-gradient-to-b from-transparent via-brand-plum to-transparent" />
         <div className="bg-stone-900/90 backdrop-blur-md px-2.5 py-6 rounded-full border border-brand-plum/40 shadow-xl">
-          <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.7em] text-[#EFE7DA] font-bold font-sans">
-            St. Benedict Church • Waikkala
+          <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.7em] text-[#DCE5F3] font-bold font-sans">
+            Queen of Angels Church • Moratuwa
           </p>
         </div>
         <div className="w-[1px] h-28 bg-gradient-to-t from-transparent via-brand-plum to-transparent" />
@@ -125,7 +125,7 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
       <div className="absolute right-6 sm:right-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-6 z-30">
         <div className="w-[1px] h-28 bg-gradient-to-b from-transparent via-brand-plum to-transparent" />
         <div className="bg-stone-900/90 backdrop-blur-md px-2.5 py-6 rounded-full border border-brand-plum/40 shadow-xl">
-          <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.7em] text-[#EFE7DA] font-bold font-sans rotate-180">
+          <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.7em] text-[#DCE5F3] font-bold font-sans rotate-180">
             Save the Date • December 2026
           </p>
         </div>

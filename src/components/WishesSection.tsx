@@ -98,7 +98,7 @@ export const WishesSection: React.FC<WishesSectionProps> = ({ eventParam = 'both
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: 'easeOut' }}
-          className="w-full glass p-8 sm:p-14 rounded-[3rem] border border-white/60 shadow-[0_30px_60px_rgba(176,137,104,0.1)] relative overflow-hidden bg-white/70 backdrop-blur-3xl mb-16"
+          className="w-full glass p-8 sm:p-14 rounded-[3rem] border border-white/60 shadow-[0_30px_60px_rgba(15,31,61,0.1)] relative overflow-hidden bg-white/70 backdrop-blur-3xl mb-16"
         >
           {/* Subtle top reflection line */}
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-lavender to-transparent opacity-50" />
@@ -139,7 +139,7 @@ export const WishesSection: React.FC<WishesSectionProps> = ({ eventParam = 'both
               <button
                 disabled={isSubmitting}
                 type="submit"
-                className="w-full bg-stone-900 text-[#F7F3EB] py-5 rounded-full font-sans tracking-[0.3em] font-bold text-[11px] uppercase hover:bg-stone-950 border border-brand-plum/40 transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70"
+                className="w-full bg-stone-900 text-[#EEF2F9] py-5 rounded-full font-sans tracking-[0.3em] font-bold text-[11px] uppercase hover:bg-stone-950 border border-brand-plum/40 transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70"
               >
                 {isSubmitting ? (
                   <Loader2 className="w-5 h-5 animate-spin" />

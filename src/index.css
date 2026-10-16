@@ -2,11 +2,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* Light Brown / Dark Cream & Gold Color Palette */
-  --color-brand-plum: #C59B3F;       /* Warm Regal Gold */
-  --color-brand-lavender: #D8C7A8;   /* Warm Light Brown / Latte Cream Accent */
-  --color-brand-rose: #EFE7DA;       /* Rich Light Champagne Cream */
-  --color-brand-blush: #F7F3EB;      /* Dark Cream / Warm Sand Base */
+  /* Navy Blue & Gold Color Palette */
+  --color-brand-plum: #C59B3F;       /* Regal Gold Accent */
+  --color-brand-lavender: #AFC0DC;   /* Soft Navy-Tinted Blue Accent */
+  --color-brand-rose: #DCE5F3;       /* Pale Blue */
+  --color-brand-blush: #EEF2F9;      /* Light Blue-White Base */
+
+  /* Stone shades remapped to navy tones */
+  --color-stone-50: #F3F5F9;
+  --color-stone-100: #E6EAF2;
+  --color-stone-200: #CDD4E2;
+  --color-stone-300: #AEB8CC;
+  --color-stone-400: #8592AE;
+  --color-stone-500: #5F7093;
+  --color-stone-600: #44587D;
+  --color-stone-700: #2A3F66;
+  --color-stone-800: #1B2D52;
+  --color-stone-900: #0F1F3D;
+  --color-stone-950: #0A1530;
 
   --font-serif: "Cormorant Garamond", serif;
   --font-display: "Great Vibes", cursive;
@@ -18,7 +31,7 @@
 
 :root {
   background-color: var(--color-brand-blush);
-  color: #382E25;
+  color: #1B2D52;
 }
 
 html, body {

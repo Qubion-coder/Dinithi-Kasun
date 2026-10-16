@@ -10,13 +10,15 @@ interface IntroScreenProps {
 export function IntroScreen({ onComplete, onMusicStart }: IntroScreenProps) {
   const [opening, setOpening] = useState(false);
   const [muted, setMuted] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [stage, setStage] = useState<'first' | 'second' | 'done'>('first');
+  const firstVideoRef = useRef<HTMLVideoElement>(null);
+  const secondVideoRef = useRef<HTMLVideoElement>(null);
 
   const handleOpen = () => {
     if (opening) return;
     setOpening(true);
     onMusicStart?.();
-    const video = videoRef.current;
+    const video = firstVideoRef.current;
     if (!video) return;
 
     video.currentTime = 0;
@@ -26,16 +28,54 @@ export function IntroScreen({ onComplete, onMusicStart }: IntroScreenProps) {
     });
   };
 
+  const handleFirstEnded = () => {
+    setStage('second');
+    const video = secondVideoRef.current;
+    if (!video) {
+      setStage('done');
+      return;
+    }
+
+    video.currentTime = 0;
+    video.play().catch((error) => {
+      console.error('Could not play the second intro video:', error);
+      setStage('done');
+    });
+  };
+
   return (
-    <main className="fixed inset-0 z-[100] overflow-hidden bg-[#21191a] text-white">
-      <video
-        ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover opacity-75"
+    <motion.main
+      className="fixed inset-0 z-[100] overflow-hidden bg-[#0A1530] text-white"
+      animate={{ opacity: stage === 'done' ? 0 : 1 }}
+      transition={{ duration: 1, ease: 'easeInOut' }}
+      onAnimationComplete={() => {
+        if (stage === 'done') onComplete();
+      }}
+    >
+      <motion.video
+        ref={secondVideoRef}
+        className="absolute inset-0 h-full w-full object-cover"
         src="/gemini_generated_video_8a3962d0.mp4"
         muted={muted}
         playsInline
         preload="auto"
-        onEnded={onComplete}
+        initial={false}
+        animate={{ opacity: stage === 'first' ? 0 : 0.75 }}
+        transition={{ duration: 1.2, ease: 'easeInOut' }}
+        onEnded={() => setStage('done')}
+        aria-hidden="true"
+      />
+      <motion.video
+        ref={firstVideoRef}
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/gemini_generated_video_a42fa110.mp4"
+        muted={muted}
+        playsInline
+        preload="auto"
+        initial={false}
+        animate={{ opacity: stage === 'first' ? 0.75 : 0 }}
+        transition={{ duration: 1.2, ease: 'easeInOut' }}
+        onEnded={handleFirstEnded}
         aria-label="Romantic wedding introduction"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-black/65" />
@@ -62,11 +102,11 @@ export function IntroScreen({ onComplete, onMusicStart }: IntroScreenProps) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.15 }}
         >
-          <p className="mb-2 font-serif text-sm italic text-[#302a28]/85 sm:text-base">Together with their families</p>
-          <h1 className="font-names text-4xl leading-none text-[#302a28] drop-shadow-lg sm:text-6xl">
-            Malmi <span className="mx-1 text-3xl text-[#5b4a43]/90 sm:text-5xl">&amp;</span> Denson
+          <p className="mb-2 font-serif text-sm italic text-white/85 sm:text-base">Together with their families</p>
+          <h1 className="font-names text-4xl leading-none text-white drop-shadow-lg sm:text-6xl">
+            Dinithi <span className="mx-1 text-3xl text-white/90 sm:text-5xl">&amp;</span> Kasun
           </h1>
-          <p className="mt-4 font-serif text-sm tracking-[0.15em] text-[#302a28]/90 sm:text-base">10 DECEMBER 2026</p>
+          <p className="mt-4 font-serif text-sm tracking-[0.15em] text-white/90 sm:text-base">05 DECEMBER 2026</p>
         </motion.div>
 
         <motion.button
@@ -99,7 +139,7 @@ export function IntroScreen({ onComplete, onMusicStart }: IntroScreenProps) {
         initial={false}
         animate={{ x: opening ? '-100%' : 0, scale: 1.35 }}
         transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
-        className="pointer-events-none absolute inset-y-0 left-0 z-20 h-[100dvh] w-1/2 origin-center object-cover object-center"
+        className="pointer-events-none absolute inset-y-0 left-0 z-20 h-[100dvh] w-1/2 origin-right object-cover object-right"
       />
       <motion.img
         src="/door-right.webp"
@@ -108,8 +148,8 @@ export function IntroScreen({ onComplete, onMusicStart }: IntroScreenProps) {
         initial={false}
         animate={{ x: opening ? '100%' : 0, scale: 1.35 }}
         transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
-        className="pointer-events-none absolute inset-y-0 right-0 z-20 h-[100dvh] w-1/2 origin-center object-cover object-center"
+        className="pointer-events-none absolute inset-y-0 right-0 z-20 h-[100dvh] w-1/2 origin-left object-cover object-left"
       />
-    </main>
+    </motion.main>
   );
 }

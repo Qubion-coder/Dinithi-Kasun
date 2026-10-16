@@ -45,7 +45,7 @@ export function InvitationContent({
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5, duration: 0.6 }}
         onClick={onToggleMusic}
-        className="fixed top-6 right-6 z-50 w-12 sm:w-14 h-12 sm:h-14 bg-white/70 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgba(176,137,104,0.15)] flex items-center justify-center border border-brand-lavender/50 text-brand-plum hover:scale-105 transition-all duration-300"
+        className="fixed top-6 right-6 z-50 w-12 sm:w-14 h-12 sm:h-14 bg-white/70 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgba(15,31,61,0.15)] flex items-center justify-center border border-brand-lavender/50 text-brand-plum hover:scale-105 transition-all duration-300"
       >
         {isMusicPlaying ? (
           <Music className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -127,9 +127,9 @@ export function InvitationContent({
         <footer className="py-12 bg-white border-t border-brand-lavender/30 text-center relative overflow-hidden mt-10">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-plum/10 blur-[80px] rounded-full pointer-events-none" />
           <Heart className="w-6 h-6 mx-auto mb-6 text-brand-plum fill-brand-plum/20" />
-          <p className="font-names text-4xl sm:text-5xl mb-2 bg-gradient-to-r from-[#A87D25] via-[#DFBD69] to-[#9A7220] bg-clip-text text-transparent">Malmi & Denson</p>
+          <p className="font-names text-4xl sm:text-5xl mb-2 bg-gradient-to-r from-[#A87D25] via-[#DFBD69] to-[#9A7220] bg-clip-text text-transparent">Dinithi & Kasun</p>
           <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] font-sans text-stone-500 font-semibold block mb-8">
-            December 10, 2026
+            December 05, 2026
           </span>
           <p className="text-brand-plum text-xs mt-2 font-sans tracking-wider">
             Want a beautiful wedding website like this? Create yours with{' '}

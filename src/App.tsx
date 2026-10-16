@@ -27,7 +27,7 @@ export default function App() {
 
   let eventLabel = 'Our Wedding Celebration';
 
-  const weddingDate = new Date('2026-12-10T11:00:00');
+  const weddingDate = new Date('2026-12-05T08:30:00');
 
   const ensureAudio = useCallback(() => {
     if (!audioRef.current) {

@@ -63,7 +63,7 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="glass p-10 sm:p-14 lg:p-16 rounded-[3rem] border border-white/40 shadow-[0_30px_60px_rgba(176,137,104,0.1)] relative overflow-hidden bg-white/60 backdrop-blur-3xl lg:flex items-center gap-16"
+        className="glass p-10 sm:p-14 lg:p-16 rounded-[3rem] border border-white/40 shadow-[0_30px_60px_rgba(15,31,61,0.1)] relative overflow-hidden bg-white/60 backdrop-blur-3xl lg:flex items-center gap-16"
       >
         {/* Soft top border line */}
         <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-brand-rose via-brand-plum/80 to-brand-rose" />
@@ -91,6 +91,16 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
           </p>
           <div className="mt-6 mb-8 text-sm font-sans tracking-[0.2em] uppercase font-semibold text-brand-plum drop-shadow-sm leading-loose">
             RSVP through the form below
+          </div>
+          <div className="mb-8 space-y-2 font-serif text-lg text-stone-600">
+            <p>
+              <span className="font-semibold text-stone-700">Gayani</span> (Groom) –{' '}
+              <a href="tel:+94786092158" className="text-brand-plum hover:underline">078 609 2158</a>
+            </p>
+            <p>
+              <span className="font-semibold text-stone-700">Srini</span> (Bride) –{' '}
+              <a href="tel:+94770098859" className="text-brand-plum hover:underline">077 009 8859</a>
+            </p>
           </div>
           <div className="w-12 h-[1px] bg-brand-lavender/50 mx-auto lg:mx-0" />
         </div>
@@ -174,7 +184,7 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
                   <button
                     disabled={status === 'loading'}
                     type="submit"
-                    className="w-full bg-stone-900 text-[#F7F3EB] py-5 rounded-full font-sans tracking-[0.3em] font-bold text-[11px] uppercase hover:bg-stone-950 border border-brand-plum/40 transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70"
+                    className="w-full bg-stone-900 text-[#EEF2F9] py-5 rounded-full font-sans tracking-[0.3em] font-bold text-[11px] uppercase hover:bg-stone-950 border border-brand-plum/40 transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70"
                   >
                     {status === 'loading' ? (
                       <Loader2 className="w-5 h-5 animate-spin" />

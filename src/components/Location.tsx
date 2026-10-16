@@ -10,20 +10,20 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
   const venues = [
     {
       id: 'ceremony',
-      name: "St. Benedict Church",
-      city: "Waikkala, Sri Lanka",
+      name: "Queen of Angels Church",
+      city: "Katubedda, Moratuwa",
       quote: `"A beautiful and sacred place where we will unite in holy matrimony."`,
-      liveLocationUrl: "https://maps.app.goo.gl/tkMtEDyhc9J4Dbhn7",
-      imageUrl: "/Screenshot%202026-10-13%20002524.png",
+      liveLocationUrl: "https://www.google.com/maps/search/?api=1&query=Queen+of+Angels+Church+Katubedda+Moratuwa",
+      imageUrl: "/Screenshot%202026-10-16%20191821.png",
       label: "The Ceremony"
     },
     {
       id: 'reception',
-      name: "Moonlight Orilla Hotel",
-      city: "Nainamadama, Sri Lanka",
+      name: "Hotel Green Court (Emperor's Court)",
+      city: "No. 6, Pinketha Rd, Homagama",
       quote: `"A serene and elegant setting where we will celebrate our wedding function with joy and laughter."`,
-      liveLocationUrl: "https://maps.app.goo.gl/TRfiYteK6xzxkYtV7",
-      imageUrl: "/Screenshot%202026-10-13%20003003.png",
+      liveLocationUrl: "https://www.google.com/maps/search/?api=1&query=Hotel+Green+Court+Pinketha+Road+Homagama",
+      imageUrl: "/Screenshot%202026-10-16%20192102.png",
       label: "The Reception"
     }
   ];
@@ -47,7 +47,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                 transition={{ duration: 1.2, ease: "easeOut" }}
                 className={`w-full lg:w-[45%] flex z-20 ${isReversed ? 'lg:-translate-x-12' : 'lg:translate-x-12'}`}
               >
-                <div className="w-full h-full bg-white/90 backdrop-blur-2xl p-10 sm:p-14 lg:p-16 rounded-[2.5rem] shadow-[0_30px_60px_rgba(176,137,104,0.15)] border border-brand-lavender/30 relative overflow-hidden group flex flex-col justify-center">
+                <div className="w-full h-full bg-white/90 backdrop-blur-2xl p-10 sm:p-14 lg:p-16 rounded-[2.5rem] shadow-[0_30px_60px_rgba(15,31,61,0.15)] border border-brand-lavender/30 relative overflow-hidden group flex flex-col justify-center">
                   
                   {/* Elegant top border gradient */}
                   <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-rose via-brand-lavender to-brand-plum" />
@@ -68,7 +68,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                     <motion.div 
                       className="flex items-start gap-5 mt-4"
                     >
-                      <div className="w-12 h-12 bg-[#FAF7F2] rounded-full border border-brand-plum/40 shadow-inner flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+                      <div className="w-12 h-12 bg-[#F3F6FB] rounded-full border border-brand-plum/40 shadow-inner flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
                         <MapPin className="text-brand-plum w-5 h-5" />
                       </div>
                       <div>
@@ -83,7 +83,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                           href={venue.liveLocationUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-3 bg-stone-900 text-[#F7F3EB] px-8 py-4 rounded-full font-sans tracking-[0.2em] text-xs uppercase hover:bg-stone-950 hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-all duration-300 active:scale-95 group/btn border border-brand-plum/30"
+                          className="inline-flex items-center gap-3 bg-stone-900 text-[#EEF2F9] px-8 py-4 rounded-full font-sans tracking-[0.2em] text-xs uppercase hover:bg-stone-950 hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-all duration-300 active:scale-95 group/btn border border-brand-plum/30"
                         >
                           <Navigation className="w-4 h-4 text-brand-plum group-hover/btn:rotate-45 transition-transform duration-300" />
                           Open Live Location
