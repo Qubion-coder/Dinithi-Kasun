@@ -50,13 +50,13 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
         style={useParallax ? { y: y1, scale } : undefined}
       >
         <img
-          src="/opt/background.webp"
+          src="/opt/hero-9ekouv.webp"
           alt="Wedding Background"
           loading="eager"
           fetchPriority="high"
           decoding="async"
           className="w-full h-full object-cover"
-          style={{ objectPosition: 'center 20%' }}
+          style={{ objectPosition: 'center' }}
         />
       </motion.div>
 
@@ -115,7 +115,7 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
       <div className="absolute left-6 sm:left-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-6 z-30">
         <div className="w-[1px] h-28 bg-gradient-to-b from-transparent via-brand-plum to-transparent" />
         <div className="bg-stone-900/90 backdrop-blur-md px-2.5 py-6 rounded-full border border-brand-plum/40 shadow-xl">
-          <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.7em] text-[#DCE5F3] font-bold font-sans">
+          <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.7em] text-[#D9E3F8] font-bold font-sans">
             Queen of Angels Church • Moratuwa
           </p>
         </div>
@@ -125,7 +125,7 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
       <div className="absolute right-6 sm:right-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-6 z-30">
         <div className="w-[1px] h-28 bg-gradient-to-b from-transparent via-brand-plum to-transparent" />
         <div className="bg-stone-900/90 backdrop-blur-md px-2.5 py-6 rounded-full border border-brand-plum/40 shadow-xl">
-          <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.7em] text-[#DCE5F3] font-bold font-sans rotate-180">
+          <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.7em] text-[#D9E3F8] font-bold font-sans rotate-180">
             Save the Date • December 2026
           </p>
         </div>

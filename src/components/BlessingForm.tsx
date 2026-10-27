@@ -49,7 +49,7 @@ export function BlessingForm() {
     >
       <div className="space-y-6">
         <div>
-          <label className="block text-sm font-serif text-[#183d72] mb-2 font-semibold">
+          <label className="block text-sm font-serif text-[#1E3A94] mb-2 font-semibold">
             Your Name
           </label>
           <input
@@ -59,7 +59,7 @@ export function BlessingForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-serif text-[#183d72] mb-2 font-semibold">
+          <label className="block text-sm font-serif text-[#1E3A94] mb-2 font-semibold">
             Your Wishes
           </label>
           <textarea
@@ -74,7 +74,7 @@ export function BlessingForm() {
           disabled={isSubmitting}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full py-4 bg-gradient-to-r from-[#25569a] to-[#183d72] text-white rounded-xl font-serif text-lg shadow-lg flex items-center justify-center gap-2"
+          className="w-full py-4 bg-gradient-to-r from-[#2F55C4] to-[#1E3A94] text-white rounded-xl font-serif text-lg shadow-lg flex items-center justify-center gap-2"
         >
           {isSubmitting ? 'Sending Love...' : (
             <>

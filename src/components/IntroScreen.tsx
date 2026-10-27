@@ -1,85 +1,76 @@
 import { useRef, useState } from 'react';
 import { motion } from 'motion/react';
-import { Heart, Volume2, VolumeX } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
 interface IntroScreenProps {
   onComplete: () => void;
   onMusicStart?: () => void;
 }
 
+const INTRO_VIDEOS = [
+  { src: '/opt/intro-3ead0ccb.mp4', poster: '/opt/intro-3ead0ccb-poster.jpg' },
+  { src: '/opt/intro-7249aae6.mp4', poster: '/opt/intro-7249aae6-poster.jpg' },
+  { src: '/opt/intro-d660d227.mp4', poster: '/opt/intro-d660d227-poster.jpg' },
+];
+
 export function IntroScreen({ onComplete, onMusicStart }: IntroScreenProps) {
   const [opening, setOpening] = useState(false);
-  const [muted, setMuted] = useState(true);
-  const [stage, setStage] = useState<'first' | 'second' | 'done'>('first');
-  const firstVideoRef = useRef<HTMLVideoElement>(null);
-  const secondVideoRef = useRef<HTMLVideoElement>(null);
+  const [stage, setStage] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const done = stage >= INTRO_VIDEOS.length;
 
-  const handleOpen = () => {
-    if (opening) return;
-    setOpening(true);
-    onMusicStart?.();
-    const video = firstVideoRef.current;
-    if (!video) return;
-
-    video.currentTime = 0;
-    video.play().catch((error) => {
-      console.error('Could not play the intro video:', error);
-      setOpening(false);
-    });
-  };
-
-  const handleFirstEnded = () => {
-    setStage('second');
-    const video = secondVideoRef.current;
+  const playStage = (index: number) => {
+    setStage(index);
+    const video = videoRefs.current[index];
     if (!video) {
-      setStage('done');
+      setStage(INTRO_VIDEOS.length);
       return;
     }
 
     video.currentTime = 0;
     video.play().catch((error) => {
-      console.error('Could not play the second intro video:', error);
-      setStage('done');
+      console.error(`Could not play intro video ${index + 1}:`, error);
+      if (index === 0) setOpening(false);
+      else setStage(INTRO_VIDEOS.length);
     });
+  };
+
+  const handleOpen = () => {
+    if (opening) return;
+    setOpening(true);
+    onMusicStart?.();
+    playStage(0);
   };
 
   return (
     <motion.main
-      className="fixed inset-0 z-[100] overflow-hidden bg-[#0A1530] text-white"
-      animate={{ opacity: stage === 'done' ? 0 : 1 }}
+      className="fixed inset-0 z-[100] overflow-hidden bg-[#0A184A] text-white"
+      animate={{ opacity: done ? 0 : 1 }}
       transition={{ duration: 1, ease: 'easeInOut' }}
       onAnimationComplete={() => {
-        if (stage === 'done') onComplete();
+        if (done) onComplete();
       }}
     >
-      <motion.video
-        ref={secondVideoRef}
-        className="absolute inset-0 h-full w-full object-cover"
-        src="/opt/intro-8a3962d0.mp4"
-        poster="/opt/intro-8a3962d0-poster.jpg"
-        muted={muted}
-        playsInline
-        preload="auto"
-        initial={false}
-        animate={{ opacity: stage === 'first' ? 0 : 0.75 }}
-        transition={{ duration: 1.2, ease: 'easeInOut' }}
-        onEnded={() => setStage('done')}
-        aria-hidden="true"
-      />
-      <motion.video
-        ref={firstVideoRef}
-        className="absolute inset-0 h-full w-full object-cover"
-        src="/opt/intro-a42fa110.mp4"
-        poster="/opt/intro-a42fa110-poster.jpg"
-        muted={muted}
-        playsInline
-        preload="auto"
-        initial={false}
-        animate={{ opacity: stage === 'first' ? 0.75 : 0 }}
-        transition={{ duration: 1.2, ease: 'easeInOut' }}
-        onEnded={handleFirstEnded}
-        aria-label="Romantic wedding introduction"
-      />
+      {INTRO_VIDEOS.map((video, index) => (
+        <motion.video
+          key={video.src}
+          ref={(el) => {
+            videoRefs.current[index] = el;
+          }}
+          className="absolute inset-0 h-full w-full object-cover"
+          src={video.src}
+          poster={video.poster}
+          muted
+          playsInline
+          preload="auto"
+          initial={false}
+          animate={{ opacity: stage === index ? 0.75 : 0 }}
+          transition={{ duration: 1.2, ease: 'easeInOut' }}
+          onEnded={() => playStage(index + 1)}
+          aria-label={index === 0 ? 'Romantic wedding introduction' : undefined}
+          aria-hidden={index === 0 ? undefined : true}
+        />
+      ))}
       <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-black/65" />
 
       <motion.div
@@ -125,33 +116,7 @@ export function IntroScreen({ onComplete, onMusicStart }: IntroScreenProps) {
         </motion.button>
       </motion.div>
 
-      <button
-        type="button"
-        onClick={() => setMuted((value) => !value)}
-        className="absolute right-6 top-6 z-30 rounded-full border border-white/35 bg-black/20 p-3 text-white backdrop-blur-md transition hover:bg-black/40"
-        aria-label={muted ? 'Unmute intro video' : 'Mute intro video'}
-      >
-        {muted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
-      </button>
 
-      <motion.img
-        src="/opt/door-left.webp"
-        alt=""
-        aria-hidden="true"
-        initial={false}
-        animate={{ x: opening ? '-100%' : 0, scale: 1.35 }}
-        transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
-        className="pointer-events-none absolute inset-y-0 left-0 z-20 h-[100dvh] w-1/2 origin-right object-cover object-right"
-      />
-      <motion.img
-        src="/opt/door-right.webp"
-        alt=""
-        aria-hidden="true"
-        initial={false}
-        animate={{ x: opening ? '100%' : 0, scale: 1.35 }}
-        transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
-        className="pointer-events-none absolute inset-y-0 right-0 z-20 h-[100dvh] w-1/2 origin-left object-cover object-left"
-      />
     </motion.main>
   );
 }

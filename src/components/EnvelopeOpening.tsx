@@ -41,7 +41,7 @@ export function EnvelopeOpening({
           width: 100%;
           min-height: 100%;
           margin: 0;
-          background: #EEF2F9;
+          background: #EDF2FC;
         }
 
         .scene {
@@ -66,7 +66,7 @@ export function EnvelopeOpening({
           align-items: center;
           justify-content: center;
           padding: 20px;
-          background: radial-gradient(ellipse at 30% 20%, #F3F6FB 0%, #EFE5D5 45%, #DFD0B8 100%);
+          background: radial-gradient(ellipse at 30% 20%, #F2F5FC 0%, #EFE5D5 45%, #DFD0B8 100%);
           perspective: 1500px;
           overflow: hidden;
           font-family: "Cormorant Garamond", serif;
@@ -113,9 +113,9 @@ export function EnvelopeOpening({
         .envelope-base {
           position: absolute;
           inset: 0;
-          background: linear-gradient(145deg, #F3F6FB, #EDE3D1);
+          background: linear-gradient(145deg, #F2F5FC, #EDE3D1);
           border-radius: 6px;
-          box-shadow: 0 30px 60px -15px rgba(15,31,61,0.22), 0 0 0 1px rgba(197,155,63,0.15);
+          box-shadow: 0 30px 60px -15px rgba(16,36,102,0.22), 0 0 0 1px rgba(197,155,63,0.15);
           z-index: 1;
         }
 
@@ -269,11 +269,11 @@ export function EnvelopeOpening({
           left: 0;
           width: 66%;
           height: 100%;
-          background: linear-gradient(135deg, #F3F6FB 0%, #EFE4D2 50%, #F3F6FB 100%);
+          background: linear-gradient(135deg, #F2F5FC 0%, #EFE4D2 50%, #F2F5FC 100%);
           background-image: linear-gradient(135deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%);
           background-size: 8px 8px;
           border-right: 1px solid rgba(197,155,63,0.25);
-          box-shadow: 10px 0 30px -10px rgba(15,31,61,0.2);
+          box-shadow: 10px 0 30px -10px rgba(16,36,102,0.2);
           transform-origin: left center;
           transform: rotateY(0deg);
           transition: transform 1.5s cubic-bezier(0.25, 1, 0.3, 1), box-shadow 1.5s ease;
@@ -316,10 +316,10 @@ export function EnvelopeOpening({
           height: 54px;
           background: linear-gradient(
             to bottom, 
-            #F3F6FB 0%, 
-            #DCE5F3 25%, 
+            #F2F5FC 0%, 
+            #D9E3F8 25%, 
             #D8C49D 50%, 
-            #DCE5F3 75%, 
+            #D9E3F8 75%, 
             #CBB380 100%
           );
           box-shadow: 0 4px 10px rgba(120,95,50,0.18), inset 0 1px rgba(255,255,255,0.7);
@@ -340,7 +340,7 @@ export function EnvelopeOpening({
           width: 100%;
           height: 100%;
           object-fit: contain;
-          filter: drop-shadow(0 6px 10px rgba(15,31,61,0.22)) sepia(0.55) saturate(1.2) brightness(0.98);
+          filter: drop-shadow(0 6px 10px rgba(16,36,102,0.22)) sepia(0.55) saturate(1.2) brightness(0.98);
           transform: scale(1.6);
         }
 

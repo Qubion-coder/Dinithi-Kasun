@@ -61,10 +61,10 @@ export function EventTimeline() {
               <div className="hidden md:flex w-1/2 px-12 justify-end group-even:justify-start">
                 <motion.div
                   whileHover={{ x: isEven ? 10 : -10 }}
-                  className={`flex items-center gap-3 px-6 py-2 rounded-full border border-[#D4AF37]/20 bg-[#183d72]/5 backdrop-blur-sm shadow-sm`}
+                  className={`flex items-center gap-3 px-6 py-2 rounded-full border border-[#D4AF37]/20 bg-[#1E3A94]/5 backdrop-blur-sm shadow-sm`}
                 >
                   <Clock className="w-4 h-4 text-[#D4AF37]" />
-                  <span className="font-serif text-[#183d72] font-bold text-lg">{event.time}</span>
+                  <span className="font-serif text-[#1E3A94] font-bold text-lg">{event.time}</span>
                 </motion.div>
               </div>
 
@@ -72,13 +72,13 @@ export function EventTimeline() {
               <div className="w-full md:w-1/2 pl-10 md:pl-0">
                 <motion.div
                   whileHover={{ y: -5, scale: 1.02 }}
-                  className="relative p-8 rounded-3xl bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_20px_40px_rgba(0,0,0,0.05)] overflow-hidden group-hover:shadow-[0_25px_50px_rgba(24,61,114,0.08)] transition-all duration-500"
+                  className="relative p-8 rounded-3xl bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_20px_40px_rgba(0,0,0,0.05)] overflow-hidden group-hover:shadow-[0_25px_50px_rgba(30,58,148,0.08)] transition-all duration-500"
                 >
                   {/* Decorative corner accent */}
                   <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#D4AF37]/10 to-transparent rounded-bl-[100px] pointer-events-none transition-transform group-hover:scale-110" />
 
                   <div className="flex items-start gap-5">
-                    <div className={`p-4 rounded-2xl bg-gradient-to-br from-[#183d72] to-[#25569a] text-white shadow-lg`}>
+                    <div className={`p-4 rounded-2xl bg-gradient-to-br from-[#1E3A94] to-[#2F55C4] text-white shadow-lg`}>
                       <Icon className="w-6 h-6" />
                     </div>
 
@@ -89,7 +89,7 @@ export function EventTimeline() {
                         {event.time}
                       </div>
 
-                      <h3 className="text-2xl font-serif text-[#183d72] mb-3 group-hover:text-[#D4AF37] transition-colors">
+                      <h3 className="text-2xl font-serif text-[#1E3A94] mb-3 group-hover:text-[#D4AF37] transition-colors">
                         {event.title}
                       </h3>
 

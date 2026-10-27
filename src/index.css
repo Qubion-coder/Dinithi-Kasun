@@ -2,24 +2,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* Navy Blue & Gold Color Palette */
+  /* Royal Blue & Gold Color Palette */
   --color-brand-plum: #C59B3F;       /* Regal Gold Accent */
-  --color-brand-lavender: #AFC0DC;   /* Soft Navy-Tinted Blue Accent */
-  --color-brand-rose: #DCE5F3;       /* Pale Blue */
-  --color-brand-blush: #EEF2F9;      /* Light Blue-White Base */
+  --color-brand-lavender: #A9BCEB;   /* Soft Royal-Tinted Blue Accent */
+  --color-brand-rose: #D9E3F8;       /* Pale Blue */
+  --color-brand-blush: #EDF2FC;      /* Light Blue-White Base */
 
-  /* Stone shades remapped to navy tones */
-  --color-stone-50: #F3F5F9;
-  --color-stone-100: #E6EAF2;
-  --color-stone-200: #CDD4E2;
-  --color-stone-300: #AEB8CC;
-  --color-stone-400: #8592AE;
-  --color-stone-500: #5F7093;
-  --color-stone-600: #44587D;
-  --color-stone-700: #2A3F66;
-  --color-stone-800: #1B2D52;
-  --color-stone-900: #0F1F3D;
-  --color-stone-950: #0A1530;
+  /* Stone shades remapped to royal blue tones */
+  --color-stone-50: #F2F5FC;
+  --color-stone-100: #E3E9F8;
+  --color-stone-200: #C6D2F0;
+  --color-stone-300: #9FB3E3;
+  --color-stone-400: #6E88D0;
+  --color-stone-500: #4563BC;
+  --color-stone-600: #2B4BA8;
+  --color-stone-700: #1E3A94;
+  --color-stone-800: #17307F;
+  --color-stone-900: #102466;
+  --color-stone-950: #0A184A;
 
   --font-serif: "Cormorant Garamond", serif;
   --font-display: "Great Vibes", cursive;
@@ -31,7 +31,7 @@
 
 :root {
   background-color: var(--color-brand-blush);
-  color: #1B2D52;
+  color: #17307F;
 }
 
 html, body {
