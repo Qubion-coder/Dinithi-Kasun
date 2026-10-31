@@ -9,9 +9,8 @@ interface IntroScreenProps {
 
 const INTRO_VIDEOS = [
   { src: '/opt/intro-3ead0ccb.mp4', poster: '/opt/intro-3ead0ccb-poster.jpg' },
-  { src: '/opt/intro-e5f347ec.mp4', poster: '/opt/intro-e5f347ec-poster.jpg' },
-  { src: '/opt/intro-d660d227.mp4', poster: '/opt/intro-d660d227-poster.jpg' },
   { src: '/opt/intro-445fef7f.mp4', poster: '/opt/intro-445fef7f-poster.jpg' },
+  { src: '/opt/intro-d660d227.mp4', poster: '/opt/intro-d660d227-poster.jpg' },
 ];
 
 export function IntroScreen({ onComplete, onMusicStart }: IntroScreenProps) {
