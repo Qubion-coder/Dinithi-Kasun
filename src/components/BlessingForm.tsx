@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { useForm } from 'react-hook-form';
 import { Heart } from 'lucide-react';
 import { toast } from 'sonner';
+import { GOOGLE_SCRIPT_URL } from '../utils/googleScript';
 
 interface BlessingData {
   name: string;
@@ -12,7 +13,6 @@ interface BlessingData {
 export function BlessingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { register, handleSubmit, reset, formState: { errors } } = useForm<BlessingData>();
-  const scriptUrl = "https://script.google.com/macros/s/AKfycbyizQH-uGTCiFC0fc8cn7CwWFDN6JfrMaHcI83acPa3k_peT282eupCPsdjilX38nox/exec";
 
   const onSubmit = async (data: BlessingData) => {
     setIsSubmitting(true);
@@ -23,7 +23,7 @@ export function BlessingForm() {
       payload.append('name', data.name);
       payload.append('message', data.message);
 
-      await fetch(scriptUrl, {
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
         body: payload,

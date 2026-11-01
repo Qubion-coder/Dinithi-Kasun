@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Send, Loader2, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
+import { GOOGLE_SCRIPT_URL } from '../utils/googleScript';
 
 interface Wish {
   id: string;
@@ -35,7 +36,6 @@ export const WishesSection: React.FC<WishesSectionProps> = ({ eventParam = 'both
       setFormData(prev => ({ ...prev, name: inviteeName }));
     }
   }, [inviteeName]);
-  const scriptUrl = "https://script.google.com/macros/s/AKfycbyDuWCJjIQ7egU3VZBzAndlosVuJyfZnbGaEKA47SuOcj6iSQQys1ksRSaphGAB37V_/exec";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,7 +49,7 @@ export const WishesSection: React.FC<WishesSectionProps> = ({ eventParam = 'both
       payload.append('message', formData.message);
       payload.append('event', eventParam);
 
-      await fetch(scriptUrl, {
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
         body: payload,
