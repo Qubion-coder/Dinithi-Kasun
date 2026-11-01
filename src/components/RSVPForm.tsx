@@ -35,7 +35,6 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
       payload.append('fullName', formData.fullName);
       payload.append('guests', formData.guests);
       payload.append('dietaryNotes', formData.dietaryNotes);
-      payload.append('event', eventParam);
 
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',

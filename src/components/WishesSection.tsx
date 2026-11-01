@@ -47,7 +47,6 @@ export const WishesSection: React.FC<WishesSectionProps> = ({ eventParam = 'both
       payload.append('sheet', 'WISH');
       payload.append('name', formData.name);
       payload.append('message', formData.message);
-      payload.append('event', eventParam);
 
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
